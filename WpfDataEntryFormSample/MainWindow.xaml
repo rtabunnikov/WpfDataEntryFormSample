@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDataEntryFormSample"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-        xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet" x:Class="WpfDataEntryFormSample.MainWindow"
+        xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet"
+        x:Class="WpfDataEntryFormSample.MainWindow"
         mc:Ignorable="d"
         Title="Spreadsheet Data Entry From Sample" Height="722" Width="896" WindowStartupLocation="CenterScreen" Icon="DevExpress.ico" ShowIcon="False">
     <Grid>
@@ -13,7 +14,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="25" />
         </Grid.RowDefinitions>
-        <dxsps:SpreadsheetControl Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden" CustomCellEdit="SpreadsheetControl1_CustomCellEdit" ProtectionWarning="SpreadsheetControl1_ProtectionWarning" SelectionChanged="SpreadsheetControl1_SelectionChanged">
+        <dxsps:SpreadsheetControl x:Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden" CustomCellEdit="SpreadsheetControl1_CustomCellEdit" ProtectionWarning="SpreadsheetControl1_ProtectionWarning" SelectionChanged="SpreadsheetControl1_SelectionChanged">
             <dxsps:SpreadsheetControl.Options>
                 <dxsps:SpreadsheetControlOptions>
                     <dxsps:SpreadsheetControlOptions.Behavior>
