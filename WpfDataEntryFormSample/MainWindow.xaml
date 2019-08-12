@@ -13,7 +13,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="25" />
         </Grid.RowDefinitions>
-        <dxsps:SpreadsheetControl Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden">
+        <dxsps:SpreadsheetControl Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden" CustomCellEdit="SpreadsheetControl1_CustomCellEdit" ProtectionWarning="SpreadsheetControl1_ProtectionWarning" SelectionChanged="SpreadsheetControl1_SelectionChanged">
             <dxsps:SpreadsheetControl.Options>
                 <dxsps:SpreadsheetControlOptions>
                     <dxsps:SpreadsheetControlOptions.Behavior>
