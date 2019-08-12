@@ -16,8 +16,15 @@
         <dxsps:SpreadsheetControl Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden">
             <dxsps:SpreadsheetControl.Options>
                 <dxsps:SpreadsheetControlOptions>
+                    <dxsps:SpreadsheetControlOptions.Behavior>
+                        <dxsps:SpreadsheetBehaviorOptions>
+                            <dxsps:SpreadsheetBehaviorOptions.Selection>
+                                <dxsps:SpreadsheetSelectionBehaviorOptions HideSelection="True" MoveActiveCellMode="None"/>
+                            </dxsps:SpreadsheetBehaviorOptions.Selection>
+                        </dxsps:SpreadsheetBehaviorOptions>
+                    </dxsps:SpreadsheetControlOptions.Behavior>
                     <dxsps:SpreadsheetControlOptions.View>
-                        <dxsps:SpreadsheetViewOptions ShowColumnHeaders="False" ShowRowHeaders="False"/>
+                        <dxsps:SpreadsheetViewOptions ShowColumnHeaders="False" ShowRowHeaders="False" ShowPrintArea="False"/>
                     </dxsps:SpreadsheetControlOptions.View>
                 </dxsps:SpreadsheetControlOptions>
             </dxsps:SpreadsheetControl.Options>
