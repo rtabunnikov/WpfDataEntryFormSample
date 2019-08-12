@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WpfDataEntryFormSample")]
+[assembly: AssemblyTitle("Spreadsheet Data Entry Form Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WpfDataEntryFormSample")]
+[assembly: AssemblyCompany("Developer Express Inc.")]
+[assembly: AssemblyProduct("Wpf Spreadsheet")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

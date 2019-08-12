@@ -1,12 +1,27 @@
-﻿<Window x:Class="WpfDataEntryFormSample.MainWindow"
+﻿<dx:ThemedWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDataEntryFormSample"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet" x:Class="WpfDataEntryFormSample.MainWindow"
         mc:Ignorable="d"
-        Title="Spreadsheet Data Entry From Sample" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Spreadsheet Data Entry From Sample" Height="722" Width="896" WindowStartupLocation="CenterScreen" Icon="DevExpress.ico" ShowIcon="False">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <dxsps:SpreadsheetControl Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden">
+            <dxsps:SpreadsheetControl.Options>
+                <dxsps:SpreadsheetControlOptions>
+                    <dxsps:SpreadsheetControlOptions.View>
+                        <dxsps:SpreadsheetViewOptions ShowColumnHeaders="False" ShowRowHeaders="False"/>
+                    </dxsps:SpreadsheetControlOptions.View>
+                </dxsps:SpreadsheetControlOptions>
+            </dxsps:SpreadsheetControl.Options>
+        </dxsps:SpreadsheetControl>
+
     </Grid>
-</Window>
+</dx:ThemedWindow>
