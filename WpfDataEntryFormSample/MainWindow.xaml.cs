@@ -28,8 +28,7 @@ namespace WpfDataEntryFormSample {
             InitializeComponent();
             LoadDocumentTemplate();
             BindCustomEditors();
-            CollectionViewSource payrollViewSource = (CollectionViewSource)FindResource("PayrollViewSource");
-            payrollViewModel = new PayrollViewModel(payrollViewSource.View);
+            payrollViewModel = new PayrollViewModel(((CollectionViewSource)FindResource("PayrollViewSource")).View);
             DataContext = payrollViewModel;
         }
         
