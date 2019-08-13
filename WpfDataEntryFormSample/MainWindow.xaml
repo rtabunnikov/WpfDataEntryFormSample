@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:WpfDataEntryFormSample"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
         x:Class="WpfDataEntryFormSample.MainWindow"
         mc:Ignorable="d"
         Title="Spreadsheet Data Entry From Sample" Height="722" Width="896" WindowStartupLocation="CenterScreen" Icon="DevExpress.ico" ShowIcon="False">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="25" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <dxsps:SpreadsheetControl x:Name="spreadsheetControl1" ShowTabSelector="False" BorderThickness="0" VerticalScrollbarVisibility="Hidden" HorizontalScrollbarVisibility="Hidden" CustomCellEdit="SpreadsheetControl1_CustomCellEdit" ProtectionWarning="SpreadsheetControl1_ProtectionWarning" SelectionChanged="SpreadsheetControl1_SelectionChanged">
             <dxsps:SpreadsheetControl.Options>
@@ -30,6 +31,14 @@
                 </dxsps:SpreadsheetControlOptions>
             </dxsps:SpreadsheetControl.Options>
         </dxsps:SpreadsheetControl>
+
+        <dxb:ToolBarControl Grid.Row="1" AllowCustomizationMenu="False" AllowQuickCustomization="False">
+            <dxb:BarButtonItem Content="First" ToolTip="First record" Glyph="{dx:DXImage SvgImages/Arrows/First.svg}"/>
+            <dxb:BarButtonItem Content="Previous" ToolTip="Previous record" Glyph="{dx:DXImage SvgImages/Arrows/Prev.svg}"/>
+            <dxb:BarStaticItem Content="Record 1 of 5"/>
+            <dxb:BarButtonItem Content="Next" ToolTip="Next record" Glyph="{dx:DXImage SvgImages/Arrows/Next.svg}"/>
+            <dxb:BarButtonItem Content="Last" ToolTip="Last record" Glyph="{dx:DXImage SvgImages/Arrows/Last.svg}"/>
+        </dxb:ToolBarControl>
 
     </Grid>
 </dx:ThemedWindow>
