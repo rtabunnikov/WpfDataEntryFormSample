@@ -9,7 +9,7 @@
     xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
     x:Class="WpfDataEntryFormSample.MainWindow"
     mc:Ignorable="d"
-    Title="Spreadsheet Data Entry From Sample" Height="722" Width="896" WindowStartupLocation="CenterScreen" Icon="DevExpress.ico" ShowIcon="False">
+    Title="Spreadsheet Data Entry From Sample" Height="722" Width="896" WindowStartupLocation="CenterScreen" Icon="DevExpress.ico" ShowIcon="False" Loaded="MainWindow_Loaded">
     <Window.Resources>
         <local:PayrollData x:Key="PayrollData" />
         <CollectionViewSource x:Key="PayrollViewSource" Source="{StaticResource PayrollData}" />

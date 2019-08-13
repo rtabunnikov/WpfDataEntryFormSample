@@ -23,6 +23,7 @@ namespace WpfDataEntryFormSample {
     /// </summary>
     public partial class MainWindow : ThemedWindow {
         private readonly PayrollViewModel payrollViewModel;
+        private readonly SpreadsheetBindingManager bindingManager = new SpreadsheetBindingManager();
 
         public MainWindow() {
             InitializeComponent();
@@ -81,6 +82,30 @@ namespace WpfDataEntryFormSample {
                 if (editors.Count == 1)
                     spreadsheetControl1.OpenCellEditor(DevExpress.XtraSpreadsheet.CellEditorMode.Edit);
             }
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e) {
+            bindingManager.Control = spreadsheetControl1;
+            bindingManager.SheetName = "Payroll Calculator";
+
+            bindingManager.AddBinding("EmployeeName", "C3");
+            bindingManager.AddBinding("HourlyWages", "D6");
+            bindingManager.AddBinding("RegularHoursWorked", "D8");
+            bindingManager.AddBinding("VacationHours", "D10");
+            bindingManager.AddBinding("SickHours", "D12");
+            bindingManager.AddBinding("OvertimeHours", "D14");
+            bindingManager.AddBinding("OvertimeRate", "D16");
+            bindingManager.AddBinding("OtherDeduction", "D22");
+            bindingManager.AddBinding("TaxStatus", "I4");
+            bindingManager.AddBinding("FederalAllowance", "I6");
+            bindingManager.AddBinding("StateTax", "I8");
+            bindingManager.AddBinding("FederalIncomeTax", "I10");
+            bindingManager.AddBinding("SocialSecurityTax", "I12");
+            bindingManager.AddBinding("MedicareTax", "I14");
+            bindingManager.AddBinding("InsuranceDeduction", "I20");
+            bindingManager.AddBinding("OtherRegularDeduction", "I22");
+
+            bindingManager.DataSource = payrollViewModel.Payroll;
         }
     }
 }
