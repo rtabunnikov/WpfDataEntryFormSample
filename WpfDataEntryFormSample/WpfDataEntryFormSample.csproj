@@ -95,7 +95,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PayrollData.cs" />
     <Compile Include="PayrollModel.cs" />
+    <Compile Include="PayrollViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
