@@ -46,9 +46,9 @@ namespace WpfDataEntryFormSample {
         public void AddBinding(string propertyName, string cellReference) {
             if (cellBindings.ContainsKey(propertyName))
                 throw new ArgumentException($"Already has binding to {propertyName} property");
-            if (dataSource is ITypedList typedList) {
-                PropertyDescriptorCollection dataSourceProperties = typedList.GetItemProperties(null);
-                PropertyDescriptor propertyDescriptor = dataSourceProperties[propertyName];
+            if (dataSource is IItemProperties provider) {
+                var itemProperties = provider.ItemProperties;
+                PropertyDescriptor propertyDescriptor = itemProperties.SingleOrDefault(p => p.Name == propertyName)?.Descriptor as PropertyDescriptor;
                 if (propertyDescriptor == null)
                     throw new InvalidOperationException($"Unknown { propertyName } property");
                 if (currentItem != null)
