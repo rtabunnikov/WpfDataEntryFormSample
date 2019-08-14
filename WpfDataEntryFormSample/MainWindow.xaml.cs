@@ -1,26 +1,11 @@
-﻿using DevExpress.Spreadsheet;
+﻿using System;
+using System.Windows;
+using System.Windows.Data;
+using DevExpress.Spreadsheet;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors.Settings;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfDataEntryFormSample {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : ThemedWindow {
         private readonly PayrollViewModel payrollViewModel;
         private readonly SpreadsheetBindingManager bindingManager = new SpreadsheetBindingManager();
@@ -37,6 +22,7 @@ namespace WpfDataEntryFormSample {
             spreadsheetControl1.LoadDocument("PayrollCalculatorTemplate.xlsx");
             spreadsheetControl1.Document.History.IsEnabled = false;
         }
+
         private void BindCustomEditors() {
             var sheet = spreadsheetControl1.ActiveWorksheet;
             sheet.CustomCellInplaceEditors.Add(sheet["D8"], CustomCellInplaceEditorType.Custom, "RegularHoursWorked");

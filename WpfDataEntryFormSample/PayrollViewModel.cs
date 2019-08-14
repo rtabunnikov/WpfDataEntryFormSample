@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfDataEntryFormSample {
     public class PayrollViewModel : INotifyPropertyChanged {
@@ -18,11 +15,15 @@ namespace WpfDataEntryFormSample {
         public int Count => Payroll.Cast<object>().Count();
 
         public void MoveFirst() => Payroll.MoveCurrentToFirst();
+
         public void MovePrevious() => Payroll.MoveCurrentToPrevious();
+
         public void MoveNext() => Payroll.MoveCurrentToNext();
+
         public void MoveLast() => Payroll.MoveCurrentToLast();
 
         public bool CanMovePrevious() => Payroll.CurrentPosition > 0;
+
         public bool CanMoveNext() => Payroll.CurrentPosition < Count - 1;
 
         public string DisplayText => !Payroll.IsEmpty ? $"Record {Payroll.CurrentPosition + 1} of {Count}" : string.Empty;

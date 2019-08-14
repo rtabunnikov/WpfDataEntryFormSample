@@ -126,6 +126,7 @@ namespace WpfDataEntryFormSample {
                     propertyDescriptor.RemoveValueChanged(currentItem, OnPropertyChanged);
             }
         }
+
         private void SubscribePropertyChanged() {
             if (currentItem != null) {
                 foreach (PropertyDescriptor propertyDescriptor in propertyDescriptors)

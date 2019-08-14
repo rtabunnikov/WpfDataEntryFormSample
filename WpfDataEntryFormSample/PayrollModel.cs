@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfDataEntryFormSample {
-    /// <summary>
-    /// Entity class with represents payroll item (record) 
-    /// </summary>
     public class PayrollModel : INotifyPropertyChanged {
         private string employeeName;
         private double hourlyWages;
